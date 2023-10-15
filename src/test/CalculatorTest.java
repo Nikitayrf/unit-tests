@@ -1,4 +1,5 @@
-import lectures.lecture2.main.java.Calculator;
+//import lectures.lecture2.main.java.Calculator;  // Для третей лекции переопределить импорт класса
+import lectures.lecture3.Calculator;  // Для третей лекции добавить импорт класса
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -78,5 +79,11 @@ public class CalculatorTest {
 
         System.setIn( inputStream );
         System.setOut( null );
+    }
+
+    // 1.2д. Создадим неудачный тест для метода заглушки.
+    @Test
+    void computerCircleRadiusWorksCorrectly() {
+        assertThat( Calculator.computeAreaCircle(  10)).isEqualTo(  314.1592653589793);
     }
 }
