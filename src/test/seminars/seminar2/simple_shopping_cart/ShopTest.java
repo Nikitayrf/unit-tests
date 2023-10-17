@@ -1,3 +1,5 @@
+package seminars.seminar2.simple_shopping_cart;
+
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
