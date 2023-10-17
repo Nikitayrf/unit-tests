@@ -1,3 +1,5 @@
+package seminars.seminar2.hw;
+
 import static org.assertj.core.api.Assertions.*;
 
 import homeworks.homework2.Car;
