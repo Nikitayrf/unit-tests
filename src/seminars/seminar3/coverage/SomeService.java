@@ -59,13 +59,7 @@ public class SomeService {
             return a + c;
         } else if (c == 13) {
             return a + b;
-        } return a + b + c;
+        }
+        return a + b + c;
     }
-
-
-    /**
-     * 3.6. Метод аутентификации принимает на вход 2 строки (String login, String password). Нужно вернуть true если login и password корректны, иначе false.
-     */
-
-
 }

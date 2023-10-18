@@ -4,23 +4,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import seminars.seminar3.tdd.MoodAnalyser;
-import seminars.seminar3.tdd.User;
-import seminars.seminar3.tdd.UserRepository;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
 
 class SomeServiceTest {
     private SomeService someService;
-    private MoodAnalyser moodAnalyser;
 
     @BeforeEach
     void setUP() {
         someService = new SomeService();
-        moodAnalyser = new MoodAnalyser();
     }
 
     // 3.1.
@@ -130,84 +124,5 @@ class SomeServiceTest {
         assertEquals( 3, someService.luckySum( 1, 2, 13 ) );
     }
 
-    // 3.5.
 
-    /**
-     * Примените подход TDD для создания нового класса MoodAnalyser, который оценивает настроение
-     * выраженное во фразах.
-     */
-
-    @Test
-    void analyseMoodBad() {
-        assertThat( moodAnalyser.analyseMood( "I am very unlucky" ) ).contains( "bad" );
-    }
-
-    @Test
-    void analyseMoodNormal() {
-        assertThat( moodAnalyser.analyseMood( " I am very incomprehensible" ) ).contains( "normal" );
-    }
-
-    @Test
-    void analyseMoodGood() {
-        assertThat( moodAnalyser.analyseMood( " I am very happy" ) ).contains( "good" );
-    }
-
-    @Test
-    void analyseMoodResumeMoodNotClear() {
-        assertThat( moodAnalyser.analyseMood( "Hello world" ) ).contains( "mood not clear" );
-    }
-
-    // 3.6.
-
-    /**
-     * Разработайте класс User с методом аутентификации по логину и паролю. Метод должен возвращать true, если
-     * введенные логин и пароль корректны, иначе false. Протестируйте все методы
-     */
-
-    @Test
-    void authenticateTrue() {
-        User user = new User( "logTrue", "passTrue" );
-        assertTrue( user.authenticate( "logTrue", "passTrue" ) );
-    }
-
-    @Test
-    void authenticateFalse() {
-        User user = new User( "log123", "pass123" );
-        assertFalse( user.authenticate( "l_o_g_false", "p_a_s_s_false" ) );
-    }
-
-    // 3.7
-
-    /**
-     * Добавьте класс UserRepository для управления пользователями. В этот класс должен быть включен метод
-     * addUser, который добавляет пользователя в систему, если он прошел аутентификацию. Покройте тестами новую функциональность
-     */
-
-    @Test
-    void addUserFindByNameTrue() {
-        User user = new User( "log123", "pass123" );
-        user.authenticate( "log123", "pass123" );
-        UserRepository userRepository = new UserRepository();
-        userRepository.addUser( user );
-        assertTrue( userRepository.findByName( "log123" ) );
-    }
-
-    @Test
-    void addUserTrue() {
-        User user = new User( "log123", "pass123" );
-        user.authenticate( "log123", "pass123" );
-        UserRepository userRepository = new UserRepository();
-        userRepository.addUser( user );
-        assertThat( userRepository.data ).contains( user );
-    }
-
-    @Test
-    void addUserFalse() {
-        User user = new User( "log123", "pass123" );
-        user.authenticate( "l_o_g_false", "p_a_s_s_false" );
-        UserRepository userRepository = new UserRepository();
-        userRepository.addUser( user );
-        assertThat( userRepository.data ).doesNotContain( user );
-
-    }
 }
