@@ -1,4 +1,6 @@
-package homeworks.homework1;
+package seminars.seminar1.hw;
+
+import seminars.seminar1.hw.calculator.Calculator;
 
 import static org.assertj.core.api.Assertions.*;
 

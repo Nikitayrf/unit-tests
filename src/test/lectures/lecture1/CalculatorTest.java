@@ -1,4 +1,4 @@
-//import lectures.lecture2.main.java.Calculator;  // Для третей лекции переопределить импорт класса
+package lectures.lecture1;//import lectures.lecture2.main.java.Calculator;  // Для третей лекции переопределить импорт класса
 import lectures.lecture3.Calculator;  // Для третей лекции добавить импорт класса
 import org.junit.jupiter.api.Test;
 
