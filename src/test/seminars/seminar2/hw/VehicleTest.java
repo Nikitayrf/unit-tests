@@ -2,9 +2,6 @@ package seminars.seminar2.hw;
 
 import static org.assertj.core.api.Assertions.*;
 
-import homeworks.homework2.Car;
-import homeworks.homework2.Motorcycle;
-import homeworks.homework2.Vehicle;
 import org.junit.jupiter.api.*;
 
 public class VehicleTest {

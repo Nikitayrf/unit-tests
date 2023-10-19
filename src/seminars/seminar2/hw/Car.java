@@ -1,4 +1,4 @@
-package homeworks.homework2;
+package seminars.seminar2.hw;
 
 public class Car extends Vehicle{
     private String company;

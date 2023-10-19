@@ -1,4 +1,4 @@
-package homeworks.homework1;
+package seminars.seminar1.hw.calculator;
 
 
 public class Calculator {
