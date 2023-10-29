@@ -1,10 +1,10 @@
 package seminars.seminar5;
 
 import org.junit.jupiter.api.Test;
-import seminars.seminar5.number.MaxNumberModule;
-import seminars.seminar5.number.RandomNumberModule;
-import seminars.seminar5.user.UserRepository;
-import seminars.seminar5.user.UserService;
+import seminars.seminar5.work.number.MaxNumberModule;
+import seminars.seminar5.work.number.RandomNumberModule;
+import seminars.seminar5.work.user.UserRepository;
+import seminars.seminar5.work.user.UserService;
 
 import java.util.Arrays;
 

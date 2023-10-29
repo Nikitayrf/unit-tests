@@ -1,4 +1,4 @@
-package seminars.seminar5.number;
+package seminars.seminar5.work.number;
 
 import java.util.List;
 import java.util.Random;

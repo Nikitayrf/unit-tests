@@ -1,4 +1,4 @@
-package seminars.seminar5.order;
+package seminars.seminar5.work.order;
 
 public class PaymentService {
     public boolean processPayment(String orderId, double amount) {
